@@ -1,0 +1,13 @@
+---
+- hosts: all
+  pre_tasks:
+    - name: update cache if need
+      apt: update_cache=yes
+  become: true
+  tasks:
+    - name: install ipcalc
+      apt:
+        name: ipcalc
+    - name: execute a command with shell module
+      shell: echo "Finished ipcalc installation!"
+

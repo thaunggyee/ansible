@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: insert lineinfile example
+      lineinfile:
+          dest: /home/ansible/test.txt
+          line: insert another line in a file
+          state: absent
+          

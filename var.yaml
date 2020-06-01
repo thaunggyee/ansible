@@ -1,0 +1,8 @@
+---
+- hosts: node1
+  vars:
+     test: Hello guys!
+  tasks:
+   - name: ansible variable testing
+     debug:
+       msg: "{{ test }}"

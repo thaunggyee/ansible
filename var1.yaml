@@ -1,0 +1,17 @@
+---
+- hosts: all
+  vars:
+    continents:
+      - Africa
+      - Europe
+      - Asia
+      - South America
+      - North America
+  tasks: 
+   - name: ansible list variable example
+     debug:
+       msg: "{{ item }}"
+     with_items:
+       - "{{ continents }}"
+   - name: git clone
+     command: git clone https://github.com/justmeandopensource/kubernetes
