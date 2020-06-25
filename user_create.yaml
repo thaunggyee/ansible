@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: creating a new user
+      user:
+        name: tester
+        password: 123
+        groups: ansible
+        shell: /bin/bash
+      become: yes

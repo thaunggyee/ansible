@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: deleting a user
+      user:
+        name: tester
+        state: absent
+        remove: yes
+        force: yes
+    

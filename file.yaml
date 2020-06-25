@@ -1,0 +1,24 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: create a directory with ansible file module
+      file:
+        dest: /home/ansible/LLL
+        owner: ansible
+        group: ansible
+        mode: u=rwx,g=rx,o=rx
+        state: directory
+    - name: create a file with file module
+      file:
+        dest: /home/ansible/lll
+        owner: ansible
+        group: ansible
+        mode: u=rwx,g=r,o=r
+        state: touch
+    - name: change file permission
+      file:
+        path: /home/ansible/test_file
+        owner: ansible
+        group: ansible
+        mode: u=rwx,g=rwx,o=rwx

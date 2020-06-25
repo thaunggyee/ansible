@@ -1,0 +1,10 @@
+---
+- hosts: node1
+  become: true
+  tasks:
+    - name: CREATING A DIRECTORY
+      command: mkdir test_dir
+    - name: CREATING A FILE
+      command: touch test_file
+    - command: >
+        cp test_file /home/ansible/test_dir/

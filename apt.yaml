@@ -1,0 +1,14 @@
+---
+- name: TESTING ANSIBLE APT MODULE
+  hosts: all
+  tasks:
+    - name: install boxes
+      apt: 
+        name: boxes
+        state: latest
+      become: yes
+    - name: install figlet
+      apt:
+        name: figlet
+        state: present
+      become: true

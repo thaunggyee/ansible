@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: copying some data 
+      copy:
+        content: "this this is data you copied"
+        dest: /home/ansible/test_file

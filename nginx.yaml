@@ -1,0 +1,17 @@
+---
+- name: install nginx
+  become: true
+  hosts: all
+  tasks:
+    - name: install nginx on node1
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+      notify:
+        - restart nginx
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted

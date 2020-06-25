@@ -1,0 +1,14 @@
+---
+- name: testing copy module
+  become: true
+  hosts: all
+  tasks:
+    - name: copy file from master to node
+      copy:
+        src: /home/ansible/playbooks/apt.yaml
+        dest: /home/ansible
+        owner: ansible
+        group: ansible
+        mode: u+rwx,g+rwx,o+rx
+
+
