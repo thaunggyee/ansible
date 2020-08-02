@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   -  name: Testing about lineinfile regexp
+      lineinfile:
+           dest: /home/ansible/test.txt
+           regexp: "{{ item.regexp }}"
+           line: "{{ item.line }}"
+      become: true
+      with_items:
+           - regexp: "^this is"
+             line: "hello guys"

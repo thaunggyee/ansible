@@ -1,0 +1,8 @@
+---
+- hosts: node1
+  become: true
+  tasks:
+    - name: "Determine if apache2 is installed"
+      command: /usr/bin/date
+      when: ansible_os_family == "Debian"
+      

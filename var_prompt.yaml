@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: False
+  vars_prompt: 
+     - name: "username"
+       prompt: "Type username: "
+       private: no
+     - name: "password"
+       prompt: "Type some text to input: "
+       private: yes
+  tasks:
+     - name: "print some context"
+       debug: 
+         msg: "{{ username }}"
+     - name: copying some text to file
+       copy:
+          dest: /home/ansible/test.txt
+          content: "{{ username }}"

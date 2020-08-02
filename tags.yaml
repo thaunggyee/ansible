@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  become: true
+  gather_facts: False
+  tasks:
+    - name: going to play
+      debug: 
+        msg: "I am playing..."
+      tags: play
+    - name: going to study
+      debug:
+        msg: "I am studying..."
+      tags: study
