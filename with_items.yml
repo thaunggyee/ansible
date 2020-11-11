@@ -1,0 +1,12 @@
+---
+- hosts: dbserver
+  tasks:
+     - name: testing with_items 
+       apt:
+         name: "{{ item }}"
+         state: latest
+       with_items:
+              - figlet
+              - ipcalc
+              - boxes
+       become: true
