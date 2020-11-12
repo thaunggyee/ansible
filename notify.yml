@@ -1,0 +1,21 @@
+---
+- name: Testing Notify and Handler 
+  hosts: appserver
+  pre_tasks:
+       - name: upate packages
+         apt:
+           update_cache: yes
+  become: true
+  tasks:
+       - name: install apache2
+         apt:
+           name: apache2
+           state: latest
+         notify:
+             - stop apache2
+         become: true
+  handlers:
+       - name: stop apache2
+         service:
+              name: apache2
+              state: stopped
