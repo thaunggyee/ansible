@@ -66,8 +66,7 @@ ansible-playbook -i inventory install.yml
 
 Usage---> 
 
-![Image of credentials]
-(https://github.com/tho861998/ansible/blob/master/images/Screenshot%20from%202021-06-24%2015-46-15.png)
+![Image of credentials](https://github.com/tho861998/ansible/blob/master/images/Screenshot%20from%202021-06-24%2015-46-15.png)
 
 
 
