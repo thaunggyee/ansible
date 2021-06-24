@@ -64,13 +64,14 @@ kill service running on port 80 (i.e nginx)
 ansible-playbook -i inventory install.yml
 ```
 
-Usage---> 
+* create credential.
 ```bash
 type == machine
 username == username for ssh-copy-id ( root )
 ssh_private_key == awx node's private key
 privilege_escalation_method == sudo
-![Image of credentials](https://github.com/tho861998/ansible/blob/master/images/Screenshot%20from%202021-06-24%2015-46-15.png)
 ```
+![Image of credentials](https://github.com/tho861998/ansible/blob/master/images/Screenshot%20from%202021-06-24%2015-46-15.png)
+
 
 
