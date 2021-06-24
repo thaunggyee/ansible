@@ -73,5 +73,38 @@ privilege_escalation_method == sudo
 ```
 ![Image of credentials](https://github.com/tho861998/ansible/blob/master/images/Screenshot%20from%202021-06-24%2015-46-15.png)
 
+* add a host .
+```bash
+name == as you like
+variable ---> ansible_host: node_ip
+```
+* create inventory
+```bash
+name == as you like
+org == your org
+click save
+clock hosts to add hosts 
+name == as you like
+variable ---> ansible_host: node_ip
+save
+click groups to add host to a group 
+select group or create new gp
+```
+* add your project
+```bash
+select git
+add your git repo
+keep blank for main branch 
+save
+click job templates
+```
+* add your job templates
+```bash
+inventory == your created inventory
+project == your created prj
+playbook == choose one
+credentials == created credentials with ssh private key
+save and launch to start creating playbook
+```
 
 
