@@ -58,6 +58,9 @@ secret_key=lKjpI3Hdj2PWlp8De6g2pDj9e5dU5e
 ```
 * Run playbook to install ansible aws
 ```bash
+sudo su -
+cd /home/thaunghtikeoo/awx-*/installer/
+kill service running on port 80 (i.e nginx)
 ansible-playbook -i inventory install.yml
 ```
 
