@@ -1,4 +1,4 @@
-# How to Install Ansible AWX on Ubuntu 20.04 LTS
+# How to Install Ansible AWX on Ubuntu 20.04 LTS.
 
 Ansible AWX is a free and opensource front-end web application that provides a user interface to manage Ansible playbooks and inventories, as well as a REST API for Ansible. It is an open source version of Red Hat Ansible Tower. In this guide, we are going to install Ansible AWX on Ubuntu 20.04 LTS system.
 
@@ -64,7 +64,10 @@ kill service running on port 80 (i.e nginx)
 ansible-playbook -i inventory install.yml
 ```
 
+Usage---> 
 
+![images of credentials]
+(https://github.com/tho861998/ansible/images/credential.png)
 
 
 
